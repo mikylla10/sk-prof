@@ -1446,18 +1446,6 @@ export default function AdminDashboard() {
                               <p className="text-white text-sm font-mono">{selectedUser.id}</p>
                             </div>
                           </div>
-                          <div className="text-right">
-                            <p className="text-gray-400 text-sm">User Status</p>
-                            <span className={`px-4 py-2 rounded-full text-base font-medium ${
-                              selectedUser.status === "approved"
-                                ? "bg-green-900 text-green-200"
-                                : selectedUser.status === "pending"
-                                  ? "bg-yellow-900 text-yellow-200"
-                                  : "bg-red-900 text-red-200"
-                            }`}>
-                              {selectedUser.status.charAt(0).toUpperCase() + selectedUser.status.slice(1)}
-                            </span>
-                          </div>
                         </div>
                       </div>
                     </div>
