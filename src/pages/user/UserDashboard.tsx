@@ -256,9 +256,12 @@ function SurveyForm({ userId }: { userId: string }) {
 
     try {
       if (hasSubmitted && surveyId) {
-        // Update existing survey
-        // Note: You'll need to implement an update function in SurveyService
-        await SurveyService.saveSurvey(userId, formData)
+        // Update existing survey - use updateDoc directly
+        const surveyDocRef = doc(db, "surveys", surveyId)
+        await updateDoc(surveyDocRef, {
+          ...formData,
+          updatedAt: new Date(),
+        })
         setSuccess(true)
         setIsEditing(false)
       } else {
