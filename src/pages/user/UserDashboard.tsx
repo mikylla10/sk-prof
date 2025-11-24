@@ -787,6 +787,7 @@ function SurveyForm({ userId }: { userId: string }) {
                 }`}
               >
                 <option value="">Choose here...</option>
+                <option value="None">None</option>
                 <option value="1-2 times">1-2 times</option>
                 <option value="3-4 times">3-4 times</option>
                 <option value="5 and above">5 and above</option>
